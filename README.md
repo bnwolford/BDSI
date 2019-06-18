@@ -3,9 +3,9 @@ Big Data Summer Institute 2019 | Genomics
 
 ## Resources
 
-- [Reproductive Research Demo](https://github.com/statgen/bdsi-demo-2019){target="_blank"} 
-- [Canvas](https://canvas.umich.edu/gateway/){target="_blank"} 
-- [Slack](https://bdsiworkspace.slack.com){target="_blank"} 
+- [Reproductive Research Demo](https://github.com/statgen/bdsi-demo-2019){:target="_blank"}
+- [Canvas](https://canvas.umich.edu/gateway/){:target="_blank"}
+- [Slack](https://bdsiworkspace.slack.com){:target="_blank"}
 
 ## Log into compute resources 
 
