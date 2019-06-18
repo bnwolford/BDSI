@@ -7,6 +7,7 @@ bwolford@umich.edu
 - [Reproductive Research Demo](https://github.com/statgen/bdsi-demo-2019)
 - [Canvas](https://canvas.umich.edu/gateway/)
 - [Slack](https://bdsiworkspace.slack.com)
+- [BDSI Wiki](http://bigdatasummerinst.sph.umich.edu/wiki/index.php/Main_Page)  
 
 ## Log into compute resources 
 
