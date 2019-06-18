@@ -1,5 +1,5 @@
 # BDSI
-Big Data Summer Institute 2019
+Big Data Summer Institute 2019 | Genomics
 
 ## Resources
 
