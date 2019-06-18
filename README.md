@@ -1,4 +1,4 @@
-# BDSI
+# BDSI | Genomics
 Big Data Summer Institute 2019 | Genomics
 
 ## Resources
