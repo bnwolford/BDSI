@@ -1,5 +1,6 @@
 # BDSI | Genomics
 Big Data Summer Institute 2019 | Genomics
+bwolford@umich.edu
 
 ## Resources
 
