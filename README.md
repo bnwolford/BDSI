@@ -16,7 +16,7 @@ Enter your password and complete Duo login
 
 2) Command line
 
-ssh UNIQNAME@biostat-login.sph.umich.edu
+`ssh <yourUNIQNAME>@biostat-login.sph.umich.edu`
 Enter your password and complete Duo login
 
 ## Access this git repo from your home directory
