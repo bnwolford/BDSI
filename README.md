@@ -20,5 +20,8 @@ Enter your password and complete Duo login
 Enter your password and complete Duo login
 
 ## Access this git repo from your home directory
+`cd ~/`  
+`git clone https://github.com/bnwolford/BDSI.git`  
+`cd BDSI`  
+Now you find yourself in a folder that mirrors the code and files in this repo.  
 
-`git clone `
