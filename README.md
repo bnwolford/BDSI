@@ -36,7 +36,7 @@ Now you find yourself in a folder that mirrors the code and files in this repo.
 `cd /home/bdsi2019/genomics/data/prs`
 
 ### Single Cell RNAseq
-To access code from the [GitHub](https://github.com/xzhoulab/DECComparison), you can clone the repo into your home directory.  
+To access code from the [Zhou lab GitHub](https://github.com/xzhoulab/DECComparison), you can clone the repo into your home directory.  
 `cd ~/`  
 `git clone https://github.com/xzhoulab/DECComparison.git`   
 `cd DECComparison`  
