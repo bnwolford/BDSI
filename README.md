@@ -8,6 +8,7 @@ bwolford@umich.edu
 - [Canvas](https://canvas.umich.edu/gateway/)
 - [Slack](https://bdsiworkspace.slack.com)
 - [BDSI Wiki](http://bigdatasummerinst.sph.umich.edu/wiki/index.php/Main_Page)  
+- [UNIX tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/)
 
 ## Log into compute resources 
 
