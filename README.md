@@ -35,23 +35,23 @@ Now you find yourself in a folder that mirrors the code and files in this repo.
 
 ### Single Cell RNAseq
 To access code from the [GitHub](https://github.com/xzhoulab/DECComparison), you can clone the repo into your home directory.  
-`cd ~/`
-`git clone https://github.com/xzhoulab/DECComparison.git`  
-`cd DECComparison`
+`cd ~/`  
+`git clone https://github.com/xzhoulab/DECComparison.git`   
+`cd DECComparison`  
 
-We want to practice a typical workflow which involves sharing one dataset and performing indpeendent analyses in our own directories. For this reason, I've downloaded the GEO and TCGA data for you. For your information:
+We want to practice a typical workflow which involves sharing one dataset and performing indpeendent analyses in our own directories. For this reason, I've downloaded the GEO and TCGA data for you. For your information:  
 
-I executed the following scripts:
+I executed the following scripts: 
 `Rscript data_download_tcga.R`  
 `Rscript data_download_geo.R`  
 After installing package dependencies:  
 `install.packages("BiocManager")`  
 `BiocManager::install("TCGAbiolinks")`  
 `BiocManager::install("SummarizedExperiment")`  
-`BiocManager::install("GEOquery")`
+`BiocManager::install("GEOquery")`  
 In the below directory. 
 
-`cd /home/bdsi2019/genomics/data/scrna`
+`cd /home/bdsi2019/genomics/data/scrna`  
 
 Now you can use a deconvolution method in `~/DECComparison/algorithms` to perform deconvolution.
 
