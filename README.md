@@ -24,9 +24,14 @@ Make sure you're on MWireless.
 Enter your password and complete Duo login
 
 ## Access this repository from your home directory
-`cd ~/`  
-`git clone https://github.com/bnwolford/BDSI.git`  
-`cd BDSI`  
+```
+#head to your home directory
+cd ~/
+#clone t the repo
+git clone https://github.com/bnwolford/BDSI.git
+#move into the new folder that  has been  created
+cd BDSI
+```
 Now you find yourself in a folder that mirrors the code and files in this repo.  
 
 ## Project-specific notes
