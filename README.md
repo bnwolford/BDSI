@@ -16,7 +16,8 @@ bwolford@umich.edu
 1) Graphical User Interface (GUI) 
 
 Enter the URL http://biostat-login.sph.umich.edu on Chrome or Firefox  
-Enter your password and complete Duo login
+Enter your password and complete Duo login  
+Interactive Apps >> RStudio
 
 2) Command line
 
