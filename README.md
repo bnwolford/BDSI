@@ -10,6 +10,7 @@ bwolford@umich.edu
 - [BDSI Wiki](http://bigdatasummerinst.sph.umich.edu/wiki/index.php/Main_Page)  
 - [UNIX tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/)
 - [Nano tutorial](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
+- [Download MobaXterm](https://mobaxterm.mobatek.net)
 
 ## Log into compute resources 
 
