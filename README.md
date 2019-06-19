@@ -27,7 +27,7 @@ Enter your password and complete Duo login
 ```
 #head to your home directory
 cd ~/
-#clone t the repo
+#clone the repo
 git clone https://github.com/bnwolford/BDSI.git
 #move into the new folder that  has been  created
 cd BDSI
