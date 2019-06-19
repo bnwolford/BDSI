@@ -22,7 +22,7 @@ Enter your password and complete Duo login
 `ssh <yourUNIQNAME>@biostat-login.sph.umich.edu`  
 Enter your password and complete Duo login
 
-## Access this git repo from your home directory
+## Access this repository from your home directory
 `cd ~/`  
 `git clone https://github.com/bnwolford/BDSI.git`  
 `cd BDSI`  
