@@ -54,7 +54,7 @@ In the below directory.
 
 `cd /home/bdsi2019/genomics/data/scrna`  
 
-Now you can use a deconvolution method in `~/DECComparison/algorithms` to perform deconvolution.
+Now you can use a deconvolution method in `~/DECComparison/algorithms` to perform deconvolution. You will need to perform various manipulation of the input files and create your code to get these methods up and running.
 
 ### Population Genetics
 
