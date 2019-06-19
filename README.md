@@ -19,6 +19,7 @@ Enter your password and complete Duo login
 
 2) Command line
 
+Make sure you're on MWireless.
 `ssh <yourUNIQNAME>@biostat-login.sph.umich.edu`  
 Enter your password and complete Duo login
 
