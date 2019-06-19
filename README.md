@@ -35,9 +35,19 @@ Now you find yourself in a folder that mirrors the code and files in this repo.
 
 ### Single Cell RNAseq
 To access code from the [GitHub](https://github.com/xzhoulab/DECComparison), you can clone the repo into your home directory.  
-`git clone https://github.com/xzhoulab/DECComparison.git`
+`git clone https://github.com/xzhoulab/DECComparison.git`  
+
+`Rscript data_download_tcga.R`  
+`Rscript data_download_geo.R`  
+These have package dependencies you will have to install: 	
+`install.packages("BiocManager")`  
+`BiocManager::install("TCGAbiolinks")`  
+`BiocManager::install("SummarizedExperiment")`  
+
 
 `cd /home/bdsi2019/genomics/data/scrna`
+
+
 
 ### Population Genetics
 
