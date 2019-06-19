@@ -9,6 +9,7 @@ bwolford@umich.edu
 - [Slack](https://bdsiworkspace.slack.com)
 - [BDSI Wiki](http://bigdatasummerinst.sph.umich.edu/wiki/index.php/Main_Page)  
 - [UNIX tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/)
+- [Nano tutorial](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
 
 ## Log into compute resources 
 
