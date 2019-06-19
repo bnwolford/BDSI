@@ -41,7 +41,7 @@ To access code from the [GitHub](https://github.com/xzhoulab/DECComparison), you
 
 We want to practice a typical workflow which involves sharing one dataset and performing indpeendent analyses in our own directories. For this reason, I've downloaded the GEO and TCGA data for you. For your information:  
 
-I executed the following scripts: 
+I executed the following scripts:   
 `Rscript data_download_tcga.R`  
 `Rscript data_download_geo.R`  
 After installing package dependencies:  
