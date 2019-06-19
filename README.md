@@ -27,3 +27,23 @@ Enter your password and complete Duo login
 `cd BDSI`  
 Now you find yourself in a folder that mirrors the code and files in this repo.  
 
+## Project-specific notes
+
+### Polygenic risk scores
+
+`cd /home/bdsi2019/genomics/data/prs`
+
+### Single Cell RNAseq
+To access code from the [GitHub](https://github.com/xzhoulab/DECComparison), you can clone the repo into your home directory.  
+`git clone https://github.com/xzhoulab/DECComparison.git`
+
+`cd /home/bdsi2019/genomics/data/scrna`
+
+### Population Genetics
+
+`cd /home/bdsi2019/genomics/data/popgen`
+
+### Mendelian Randomization
+
+`cd /home/bdsi2019/genomics/data/mr`
+
