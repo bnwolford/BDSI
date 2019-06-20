@@ -49,19 +49,32 @@ To access code from the [Zhou lab GitHub](https://github.com/xzhoulab/DECCompari
 `git clone https://github.com/xzhoulab/DECComparison.git`   
 `cd DECComparison`  
 
-We want to practice a typical workflow which involves sharing one dataset and performing indpeendent analyses in our own directories. For this reason, I've downloaded the GEO and TCGA data for you. For your information:  
+We want to practice a typical workflow which involves sharing a cenral dataset and performing indpeendent analyses in our own directories. For this reason, I've downloaded the GEO and TCGA data for you. For your information:  
 
-I executed the following scripts:   
-`Rscript data_download_tcga.R`  
-`Rscript data_download_geo.R`  
-After installing package dependencies:  
+I navigated to the relevant directory:  
+`cd /home/bdsi2019/genomics/data/scrna`  
+I installed package dependencies interactively within R:
 `install.packages("BiocManager")`  
 `BiocManager::install("TCGAbiolinks")`  
 `BiocManager::install("SummarizedExperiment")`  
-`BiocManager::install("GEOquery")`  
-In the below directory. 
+`BiocManager::install("GEOquery")` 
+I made a required directory 
+`mkdir GDC`
+I executed the following scripts:   
+`Rscript data_download_tcga.R #bulk RNAseq data and their meta information`  
+`Rscript data_download_geo.R #scRNAseq data` 
 
-`cd /home/bdsi2019/genomics/data/scrna`  
+I also downloaded some tissue specific signature matrices (.csv files) which have been already constructed by cloning another github repository.
+```
+git clone https://github.com/xzhoulab/ImmuCC.git
+cd /home/bdsi2019/genomics/data/scrna/ImmuCC/tissue_Immucc/SignatureMatrix
+ls *csv
+```
+
+Relevant files include:
+1)
+2)
+3) 
 
 Now you can use a deconvolution method in `~/DECComparison/algorithms` to perform deconvolution. You will need to perform various manipulation of the input files and create your code to get these methods up and running.
 
