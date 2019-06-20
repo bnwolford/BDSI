@@ -8,6 +8,11 @@ wc
 cut
 sort
 uniq
+less
+zless
+cat
+zcat
+gzip
 ```
 
 # One-liners
@@ -16,10 +21,10 @@ uniq
 `sed  --help`  
 `man sed`  
 
-#remove the header and  printt ever  
+#remove the header and  print every line and then count how many lines 
 `less file | awk 'NR > 1 {print $0}' | wc -l `
 
-#make a comma delimited file a tab delimited file  
+#make a comma delimited file into a tab delimited file by search and replace with sed 
 `less file.csv | sed 's/,/\t/g' > file.tsv`
 
 #how many unique entries in column 6  
