@@ -21,7 +21,7 @@ gzip
 `sed  --help`  
 `man sed`  
 
-#remove the header and  print every line and then count how many lines 
+#remove the header and  print every line and then count how many lines  
 `less file | awk 'NR > 1 {print $0}' | wc -l `
 
 #make a comma delimited file into a tab delimited file by search and replace with sed 
@@ -30,6 +30,6 @@ gzip
 #how many unique entries in column 6  
 `less file | cut -f 6 | sort | uniq -c`
 
-#look at what processes you have running 
+#look at what processes you have running  
 `htop -u <uniqname>`
 
