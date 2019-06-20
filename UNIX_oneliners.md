@@ -10,6 +10,9 @@ sort
 uniq
 ```
 
+#look  at more options for a function
+`sed  --help`
+
 #remove the header and  printt ever  
 `less file | awk 'NR > 1 {print $0}' | wc -l `
 
