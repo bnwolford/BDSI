@@ -30,3 +30,6 @@ gzip
 #how many unique entries in column 6  
 `less file | cut -f 6 | sort | uniq -c`
 
+#look at what processes you have running 
+`htop -u <uniqname>`
+
