@@ -12,8 +12,9 @@ uniq
 
 # One-liners
 
-#look  at more options for a function
-`sed  --help`
+#look  at more options for a function  
+`sed  --help`  
+`man sed`  
 
 #remove the header and  printt ever  
 `less file | awk 'NR > 1 {print $0}' | wc -l `
