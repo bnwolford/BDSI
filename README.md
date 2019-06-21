@@ -50,7 +50,11 @@ To access code from the [Zhou lab GitHub](https://github.com/xzhoulab/DECCompari
 `git clone https://github.com/xzhoulab/DECComparison.git`   
 `cd DECComparison`  
 
-We want to practice a typical workflow which involves sharing a cenral dataset and performing indpeendent analyses in our own directories. For this reason, I've downloaded the data for you, and those steps are now commented out (i.e. # is placed at the front of the code line). In an analysis directory in your home directory, follow the R code and answer the questions [here]().
+We want to practice a typical workflow which involves sharing a cenral dataset and performing indpeendent analyses in our own directories. For this reason, I've downloaded the data for you, and those steps are now commented out (i.e. # is placed at the front of the code line). 
+
+We want to start tan interactive session to request compute resources before we get started.
+`srun --time=2:00 --mem=4000MB --pty /bin/bash`
+In an analysis directory in your home directory, launch R with `R`. Follow the R code and answer the questions [here]().
 
 ### Population Genetics
 
@@ -59,4 +63,3 @@ We want to practice a typical workflow which involves sharing a cenral dataset a
 ### Mendelian Randomization
 
 `cd /home/bdsi2019/genomics/data/mr`
-
