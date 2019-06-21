@@ -115,6 +115,8 @@ dim(sc_counts)
 
 ## STEP 2. load the deconvolution method -- MuSiC code
 source("~/DECComparison/algorithms/dec_music.R")
+#Go view this R script to see what the function DECMuSiC will do.
+
 ## STEP 3. run MuSiC
 #Read more about MuSiC here: https://www.nature.com/articles/s41467-018-08023-x
 #you will need to follow prompts to download/update requirements
@@ -130,10 +132,13 @@ jitter.fig = Jitter_Est(list(data.matrix(res_music$Est.prop.weighted),
                         method.name = c('MuSiC', 'NNLS'), title = 'Jitter plot of Est Proportions')
 jitter.fig
 
+#Q: What are you visualizing? Interpret the differences. 
+#HINT: NNLS is Nonnegative least squares and MuSiC is a new weighted NNLs method.
 
-##################
-## PART IV:   ##
-##################
+
+##########################################################################################
+#### PART IV: Download the GTEx single cell data from DroNc-seq (Habib et al, 2017)  #####
+##########################################################################################
 ## GOAL: using GTEx single cell data to deconvolute the GTEx 
 ## bulk RNAseq data using MuSiC, and compare the cell type proportions 
 ## from both different single-cell data sources
@@ -141,20 +146,24 @@ jitter.fig
 
 
 ## STEP 1. download data from GTEx Portal:
-wget https://storage.googleapis.com/gtex_additional_datasets/single_cell_data/GTEx_droncseq_hip_pcf.tar
+#wget https://storage.googleapis.com/gtex_additional_datasets/single_cell_data/GTEx_droncseq_hip_pcf.tar
 
 ## STEP 2. unzip the file
-tar xf GTEx_droncseq_hip_pcf.tar
+#tar xf GTEx_droncseq_hip_pcf.tar
 
 ## STEP 3. unzip the gene expression counts
-cd GTEx_droncseq_hip_pcf
-gunzip GTEx_droncseq_hip_pcf.umi_counts.txt.gz
+#cd GTEx_droncseq_hip_pcf
+#gunzip GTEx_droncseq_hip_pcf.umi_counts.txt.gz
+
+dd<-"/home/bdsi2019/genomics/data/scrna/GTEx_droncseq_hip_pcf/"
 
 ## STEP 4. read the single-cell count data
-sc_counts <- read.table("GTEx_droncseq_hip_pcf.umi_counts.txt",header=T,row.names=1)
+sc_counts <- read.table(paste0(dd,"GTEx_droncseq_hip_pcf.umi_counts.txt"),header=T,row.names=1)
 
 ## STEP 5. load the cell type information 
-https://media.nature.com/original/nature-assets/nmeth/journal/v14/n10/extref/nmeth.4407-S10.xlsx
+#wget https://media.nature.com/original/nature-assets/nmeth/journal/v14/n10/extref/nmeth.4407-S10.xlsx
+install.packages("readxl")
+library("readxl")
+sc_cell_type<-read_excel(paste0(dd,"nmeth.4407-S10.xlsx")) 
 
-sc_cell_type
-
+## STEP 6: Run MuSiC and visualize results as above! 
