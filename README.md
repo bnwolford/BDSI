@@ -27,13 +27,13 @@ You can also submit jobs from here.
 Make sure you're on MWireless.
 `ssh <yourUNIQNAME>@biostat-login.sph.umich.edu`  
 Enter your password and complete Duo login
-You can use `ssh -X <yourUNIQNAME>@biostat-login.sph.umich.edu` so that you can open figures interactive when you're running R from the  command line.  
+You can use `ssh -X <yourUNIQNAME>@biostat-login.sph.umich.edu` so that you can open figures interactive when you're running R from the  command line. For some users `ssh -Y` is required instead.
 If you want to request resources for a long-running or memory intensive command, you will need to:  
 1) submit a job using [sbatch](https://slurm.schedmd.com/sbatch.html)  
 2) request an interactive job on a compute node using [srun](https://slurm.schedmd.com/srun.html)  
 `srun --time=2:00 --mem=2g --pty /bin/bash`.  
 
-If you want to log specifically into one of the login nottes. For example, you might want to run `htop` in the same login node that you are running a process. 
+If you want to log specifically into one of the login nodes. For example, you might want to run `htop` in the same login node that you are running a process. 
 ```
 ssh <uniqname>@idran.bio.sph.umich.edu  
 ssh <uniqname>@bajor.bio.sph.umich.edu  
