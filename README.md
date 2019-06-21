@@ -54,7 +54,7 @@ We want to practice a typical workflow which involves sharing a cenral dataset a
 
 We want to start tan interactive session to request compute resources before we get started.
 `srun --time=2:00 --mem=4000MB --pty /bin/bash`
-In an analysis directory in your home directory, launch R with `R`. Follow the R code and answer the questions [here]().
+In an analysis directory in your home directory, launch R with `R`. Follow the R code and answer the questions [here](https://github.com/bnwolford/BDSI/blob/master/GTEx_DEC_step_by_step.R).
 
 ### Population Genetics
 
