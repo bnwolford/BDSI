@@ -26,6 +26,7 @@ Interactive Apps >> RStudio
 Make sure you're on MWireless.
 `ssh <yourUNIQNAME>@biostat-login.sph.umich.edu`  
 Enter your password and complete Duo login
+You can use `ssh -X <yourUNIQNAME>@biostat-login.sph.umich.edu` so that you can open figures interactive when you're running R from the  command line.  
 
 ## Access this repository from your home directory
 ```
@@ -52,9 +53,9 @@ To access code from the [Zhou lab GitHub](https://github.com/xzhoulab/DECCompari
 
 We want to practice a typical workflow which involves sharing a cenral dataset and performing indpeendent analyses in our own directories. For this reason, I've downloaded the data for you, and those steps are now commented out (i.e. # is placed at the front of the code line). 
 
-We want to start tan interactive session to request compute resources before we get started.
-`srun --time=2:00 --mem=4000MB --pty /bin/bash`
-In an analysis directory in your home directory, launch R with `R`. Follow the R code and answer the questions [here](https://github.com/bnwolford/BDSI/blob/master/GTEx_DEC_step_by_step.R).
+We want to start tan interactive session to request compute resources before we get started.  
+`srun --time=2:00 --mem=4000MB --pty /bin/bash`  
+In an analysis directory in your home directory, launch R with `R`. Follow the R code and answer the questions [here](https://github.com/bnwolford/BDSI/blob/master/GTEx_DEC_step_by_step.R).  
 
 ### Population Genetics
 
