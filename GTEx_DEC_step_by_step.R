@@ -1,7 +1,9 @@
 ############################################################
 ## PART I. Collect the single cell RNAseq data set from Brain tissue
 ############################################################
-## Darmanis, S. et al. A survey of human brain transcriptome diversity at the single cell level. 
+## First, we need to obtain the single cell RNAseq data. Here, we will download a single cell RNAseq data obtained from brain tissue.
+## This is the paper describing the single cell RNAseq data set:
+## Darmanis, S. et al. A survey of human brain transcriptome diversity at the single cell level.
 ## Proc. Natl. Acad. Sci. U. S. A. 112, 7285–7290 (2015)
 ####
 # load the Darmains data set from Gene Expression Omnibus (GEO)
@@ -54,7 +56,13 @@ table(sc_annot_sample$cell_type1)
 #########################################################################
 ## PART II. Collect the bulk RNAseq data set from GTEx database from Brain tissue
 #########################################################################
-## GTEx data download from the website
+## Second, we need to obtain the bulk RNAseq data. Here, we will focus on a bulk RNAseq data obtained from the GTEx study.
+## A description of the GTEx study is available in the following papers and website:
+## The Genotype-Tissue Expression (GTEx) project, Nature Genetics, 2013
+## The Genotype-Tissue Expression (GTEx) pilot analysis: Multitissue gene regulation in humans, Science, 2015
+## https://www.gtexportal.org/home/
+#########################################################################
+## GTEx data can be directly downloaded from the following website
 # https://gtexportal.org/home/datasets
 
 ## STEP 0: set data directory
@@ -97,6 +105,7 @@ bulk_brain_counts[1:4,1:5]
 ######################################
 ##  PART III. Run deconvolution method -- MuSiC
 ######################################
+##  Run deconvolution method. This step is to estimate the proportion of different cell types in the bulk RNAseq data, using the cell type specific gene expression from the single cell RNAseq data as a reference. For deconvolution method, we will use MuSiC as an example. Example code on the remaining ten deconvolution methods are available at: https://github.com/xzhoulab/DECComparison
 
 ## STEP 1. make sure the gene names of bulk RNAseq data and single-cell RNAseq are matched to each other
 dim(bulk_brain_counts)
@@ -136,14 +145,10 @@ jitter.fig
 #HINT: NNLS is Nonnegative least squares and MuSiC is a new weighted NNLs method.
 
 
-##########################################################################################
-#### PART IV: Download the GTEx single cell data from DroNc-seq (Habib et al, 2017)  #####
-##########################################################################################
-## GOAL: using GTEx single cell data to deconvolute the GTEx 
-## bulk RNAseq data using MuSiC, and compare the cell type proportions 
-## from both different single-cell data sources
-##
-
+##############################
+#### PART IV: Validation######
+##############################
+## Finally, we attempt to validate the deconvolution results. Here, we obtain single cell data for the same brain tissue in the GTEx project. We directly calculate the proportion of different neuronal cell types in this GTEx single cell data and treat it as the ``truth". We then compare these directly estimated proportions to the deconvolution results. While these single cell data are not collected for the exact same indivdiuals who have bulk RNAseq, they are performed in the same study and thus would serve as a reasonable validation.
 
 ## STEP 1. download data from GTEx Portal:
 #wget https://storage.googleapis.com/gtex_additional_datasets/single_cell_data/GTEx_droncseq_hip_pcf.tar
@@ -166,4 +171,6 @@ install.packages("readxl")
 library("readxl")
 sc_cell_type<-read_excel(paste0(dd,"nmeth.4407-S10.xlsx")) 
 
-## STEP 6: Run MuSiC and visualize results as above! 
+##############
+## After this excercise, we will try to use the other 10 different methods to analyze the data and compare the performance of different methods.
+##############
