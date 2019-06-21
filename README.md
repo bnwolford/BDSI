@@ -20,6 +20,7 @@ bwolford@umich.edu
 Enter the URL http://biostat-login.sph.umich.edu on Chrome or Firefox  
 Enter your password and complete Duo login  
 Interactive Apps >> RStudio
+You can also submit jobs from here.  
 
 2) Command line
 
@@ -27,6 +28,16 @@ Make sure you're on MWireless.
 `ssh <yourUNIQNAME>@biostat-login.sph.umich.edu`  
 Enter your password and complete Duo login
 You can use `ssh -X <yourUNIQNAME>@biostat-login.sph.umich.edu` so that you can open figures interactive when you're running R from the  command line.  
+If you want to request resources for a long-running or memory intensive command, you will need to:  
+1) submit a job using [sbatch](https://slurm.schedmd.com/sbatch.html)  
+2) request an interactive job on a compute node using [srun](https://slurm.schedmd.com/srun.html)  
+`srun --time=2:00 --mem=2g --pty /bin/bash`.  
+
+If you want to log specifically into one of the login nottes. For example, you might want to run `htop` in the same login node that you are running a process. 
+```
+ssh <uniqname>@idran.bio.sph.umich.edu  
+ssh <uniqname>@bajor.bio.sph.umich.edu  
+```
 
 ## Access this repository from your home directory
 ```
@@ -53,7 +64,7 @@ To access code from the [Zhou lab GitHub](https://github.com/xzhoulab/DECCompari
 
 We want to practice a typical workflow which involves sharing a cenral dataset and performing indpeendent analyses in our own directories. For this reason, I've downloaded the data for you, and those steps are now commented out (i.e. # is placed at the front of the code line). 
 
-We want to start tan interactive session to request compute resources before we get started.  
+We want to start an interactive session to request compute resources before we get started.  
 `srun --time=2:00 --mem=4000MB --pty /bin/bash`  
 In an analysis directory in your home directory, launch R with `R`. Follow the R code and answer the questions [here](https://github.com/bnwolford/BDSI/blob/master/GTEx_DEC_step_by_step.R).  
 
