@@ -65,7 +65,7 @@ To access code from the [Zhou lab GitHub](https://github.com/xzhoulab/DECCompari
 We want to practice a typical workflow which involves sharing a cenral dataset and performing indpeendent analyses in our own directories. For this reason, I've downloaded the data for you, and those steps are now commented out (i.e. # is placed at the front of the code line). 
 
 We want to start an interactive session to request compute resources before we get started.  
-`srun --time=2:00 --mem=4000MB --pty /bin/bash`  
+`srun --time=2:00:00 --mem=4000MB --pty /bin/bash`  
 In an analysis directory in your home directory, launch R with `R`. Follow the R code and answer the questions [here](https://github.com/bnwolford/BDSI/blob/master/GTEx_DEC_step_by_step.R).  
 
 ### Population Genetics
