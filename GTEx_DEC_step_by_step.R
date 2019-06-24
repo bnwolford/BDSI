@@ -134,6 +134,7 @@ res_music <-DECMuSiC(sc_counts=sc_counts, sc_cell_type=sc_annot_sample$cell_type
 ## STEP 4. visualize the results of MuSiC
 names(res_music)
 str(res_music)
+#Q: What data is in this object?
 
 # Jitter plot of estimated cell type proportions
 jitter.fig = Jitter_Est(list(data.matrix(res_music$Est.prop.weighted),
@@ -164,12 +165,55 @@ dd<-"/home/bdsi2019/genomics/data/scrna/GTEx_droncseq_hip_pcf/"
 
 ## STEP 4. read the single-cell count data
 sc_counts <- read.table(paste0(dd,"GTEx_droncseq_hip_pcf.umi_counts.txt"),header=T,row.names=1)
+dim(sc_counts) 
+#Q: How many cells are there? What are on the row and columns of this matrix?
 
-## STEP 5. load the cell type information 
+## STEP 5. load the cell type information
 #wget https://media.nature.com/original/nature-assets/nmeth/journal/v14/n10/extref/nmeth.4407-S10.xlsx
-install.packages("readxl")
-library("readxl")
-sc_cell_type<-read_excel(paste0(dd,"nmeth.4407-S10.xlsx")) 
+if (require(readxl)==FALSE){
+  install.packages("readxl")
+  library("readxl")
+}
+if (require(tidyr)==FALSE){
+  install.packages("tidyr")
+  library("tidyr")
+}
+sc_cell_type<-read_excel(paste0(dd,"nmeth.4407-S10.xlsx"),skip=20) 
+names(sc_cell_type)<-c("cell_id","num_genes","num_transcripts","cluster_id","cluster_name") #make column names nicer
+
+#make intelligible cell labels that also match the deconvolution cell types
+sc_cell_type$cell<-NA
+sc_cell_type[sc_cell_type$cluster_name=="exPFC1" | sc_cell_type$cluster_name=="exPFC2",]$cell<-"glutamatergic_neurons_from_the_PFC"
+sc_cell_type[sc_cell_type$cluster_name=="exCA1" | sc_cell_type$cluster_name=="exCA3",]$cell<-"pyramidal_neurons_from_th_hip_CA_region"
+sc_cell_type[sc_cell_type$cluster_name=="GABA1" | sc_cell_type$cluster_name=="GABA2",]$cell<-"GABAergic_interneurons"
+sc_cell_type[sc_cell_type$cluster_name=="GABA1",]$cell<-"granule_neurons_from_the_hip_dentate_gyrus_region"
+sc_cell_type[sc_cell_type$cluster_name=="ASC1" | sc_cell_type$cluster_name=="ASC2",]$cell<-"astrocytes"
+sc_cell_type[sc_cell_type$cluster_name=="ODC1",]$cell<-"oligodendrocytes"
+sc_cell_type[sc_cell_type$cluster_name=="OPC",]$cell<-"OPC" #oligodendrocyte_precursor_cells
+sc_cell_type[sc_cell_type$cluster_name=="MG",]$cell<-"microglia"
+sc_cell_type[sc_cell_type$cluster_name=="NSC",]$cell<-"neuronal_stem_cells"
+sc_cell_type[sc_cell_type$cluster_name=="END",]$cell<-"endothelial"
+
+#directly estimate proportions of cell types in our 'truth' data by counting cell types in the excel
+table(sc_cell_type$cell)/nrow(sc_cell_type)
+
+#make 'truth' into a data frame
+truth<-data.frame(t(matrix(table(sc_cell_type$cell)/nrow(sc_cell_type))))
+names(truth)<-data.frame(table(sc_cell_type$cell)/nrow(sc_cell_type))$Var1
+truth$label<-"truth"
+
+#make the estimated proportions from deconvolution with MuSiC into a data frame and merge with 'truth'
+estimate<-data.frame(res_music$Est.prop.weighted)
+estimate$label<-row.names(estimate)
+row.names(estimate)<-NULL
+compare<-bind_rows(truth,estimate)
+
+#compare summary statistics like mean to the 'truth'
+summary(estimate[,c("astrocytes","endothelial","OPC","oligodendrocytes")])
+truth[,c("astrocytes","endothelial","OPC","oligodendrocytes")]
+
+#Q: Using the compare data set or some of the intermediate datasets above, try to make a boxplot comparing the distribution of cellular proportions across GTEx samples to the benchmark 'truth' in the shared cell types (e.g. astrocytes, endothelial, microglia, oligodendrocytes). Or maybe a scatter plot!
+
 
 ##############
 ## After this excercise, we will try to use the other 10 different methods to analyze the data and compare the performance of different methods.
