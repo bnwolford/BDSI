@@ -12,6 +12,7 @@ bwolford@umich.edu
 - [Useful UNIX one-liners](https://github.com/bnwolford/BDSI/blob/master/UNIX_oneliners.md)
 - [Nano tutorial](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/)
 - [Download MobaXterm](https://mobaxterm.mobatek.net)
+- [Data Visualization](https://serialmentor.com/dataviz/index.html)
 
 ## Log into compute resources 
 
