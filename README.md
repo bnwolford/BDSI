@@ -63,7 +63,7 @@ To access code from the [Zhou lab GitHub](https://github.com/xzhoulab/DECCompari
 `git clone https://github.com/xzhoulab/DECComparison.git`   
 `cd DECComparison`  
 
-We want to practice a typical workflow which involves sharing a cenral dataset and performing indpeendent analyses in our own directories. For this reason, I've downloaded the data for you, and those steps are now commented out (i.e. # is placed at the front of the code line). 
+We want to practice a typical workflow which involves sharing a cenral dataset and performing indpendent analyses in our own directories. For this reason, I've downloaded the data for you, and those steps are now commented out (i.e. # is placed at the front of the code line). 
 
 We want to start an interactive session to request compute resources before we get started.  
 `srun --time=2:00:00 --mem=2GB --pty /bin/bash`  
