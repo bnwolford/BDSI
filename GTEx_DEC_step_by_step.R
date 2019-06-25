@@ -100,8 +100,6 @@ bulk_brain_counts <- data.frame(GeneID = bulk_counts$Description, bulk_brain_cou
 
 bulk_brain_counts[1:4,1:5]
 
-#Q: What are the ENSGXXXX numbers? 
-
 ######################################
 ##  PART III. Run deconvolution method -- MuSiC
 ######################################
