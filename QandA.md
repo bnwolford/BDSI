@@ -1,3 +1,5 @@
+# BDSI Genomics Group Questions and Answers  
+
 **Q:** I was taught that with multiple testing the p-value was 0.05/(# SNPs tested), so why is it should be 5e-08?  
 **A:**  
 
