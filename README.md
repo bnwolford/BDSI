@@ -51,6 +51,9 @@ cd BDSI
 ```
 Now you find yourself in a folder that mirrors the code and files in this repo.  
 
+## Q&A
+Your questions answered [here](QandA.md).
+
 ## Project-specific notes
 
 ### Polygenic risk scores
