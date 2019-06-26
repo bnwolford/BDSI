@@ -76,6 +76,7 @@ dd<-"/home/bdsi2019/genomics/data/scrna/"
 
 ## STEP 3. load the data into R
 library(data.table)
+#you may need to install.packages("R.utils") to read in a zipped file with fread
 bulk_counts <- fread(paste0(dd,'GTEx_Analysis_v6p_RNA-seq_RNA-SeQCv1.1.8_gene_reads.gct.gz'))
 annot_sample <- fread(paste0(dd,'GTEx_Data_V6_Annotations_SampleAttributesDS.txt'))
 annot_sample <- annot_sample[, .(SAMPID,SMTS,SMTSD)]
