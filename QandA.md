@@ -1,16 +1,16 @@
 # BDSI Genomics Group Questions and Answers  
 
 **Q:** I was taught that with multiple testing the p-value was 0.05/(# SNPs tested), so why is it should be 5e-08?  
-**A:**  
+**A:** 
 
 **Q:** How long should it take for us to expect natural resistance to develop for complex and dangerous diseases, and by then what new diseases will have either evolved or been generated/noticed in human society?  
 **A:**  
 
-**Q:** In the GWAS lecture , the procedure for selecting SNP's. For eg ,they can be correlated , so calculating p values should be done having regressed out (in some sense) the effect of neighboring SNPs.  
+**Q:** What is the procedure/algorithm for selecting SNPs for PRS? For eg ,they can be correlated , so calculating p values should be done having regressed out (in some sense) the effect of neighboring SNPs.  
 **A:**  
 
 **Q:** How do I run commands using R in the terminal. How do I "save" said R file and then re-access it?  
-**A:** From the command line type `R` and press enter. An interactive session of R will start and you will see `>` prompts which you can execute R commands. I would suggest creating a plain text file with nano, vim, emacs on the cluster or a basic text editor on your computer to record the relevant lines of R code that you are executing. When you exit R with q() or control-d you will be prompted to save your R session.  
+**A:** From the command line type `R` and press enter. An interactive session of R will start and you will see `>` prompts which you can execute R commands. I would suggest creating a plain text file with nano, vim, emacs on the cluster or a basic text editor on your computer to record the relevant lines of R code that you are executing. When you exit R with q() or control-d you will be prompted to save your R session which you can read more about [here](https://www.r-bloggers.com/using-r-dont-save-your-workspace/).
 
 **Q:** Discerning when a trait is from a polygenic or monogenic etiology?  
 **A:**  
