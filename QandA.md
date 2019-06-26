@@ -21,5 +21,5 @@
 **Q:** How to open .bim files?   
 **A:** You can use `less <file.bim>` to view the .bim file.
 
-**Q:** How to efficiently cut and paste columns between tables.
-**A:** There are many ways to do this. One option is to open each table in R and use dplyr to manipulate the columns to a data frame format of your choice.  You can also use a combination of command line tools `cut` and  `paste`.
+**Q:** How to efficiently cut and paste columns between tables.  
+**A:** There are many ways to do this. One option is to open each table in R and use dplyr to manipulate the columns to a data frame format of your choice.  You can also use a combination of command line tools like `cut` and  `paste`.
