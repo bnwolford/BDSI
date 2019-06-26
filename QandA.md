@@ -8,11 +8,10 @@
 
 **Q:** What is the procedure/algorithm for selecting SNPs for PRS? For eg ,they can be correlated , so calculating p values should be done having regressed out (in some sense) the effect of neighboring SNPs.  
 **A:**  This could be an entire review paper and is touched on in this [review paper](https://www.biorxiv.org/content/biorxiv/early/2018/09/14/416545.full.pdf).
-1) Just choose the lead SNPs
-2) LD pruning
-3) LD clumping
+1) Just choose the lead SNPs from a GWAS of your trait of interest
+2) LD pruning or clumping which is explored [here](https://privefl.github.io/bigsnpr/articles/pruning-vs-clumping.html)
 4) [LDpred](http://www.cell.com/ajhg/abstract/S0002-9297(15)00365-1) 
-5) LASSO as done [here]()
+5) LASSO as done [here](https://www.biorxiv.org/content/biorxiv/early/2019/06/05/660506.full.pdf)
 
 **Q:** How do I run commands using R in the terminal. How do I "save" said R file and then re-access it?  
 **A:** From the command line type `R` and press enter. An interactive session of R will start and you will see `>` prompts in which you can execute R commands. I would suggest creating a plain text file with nano, vim, or emacs on the cluster or a basic text editor on your computer to record the relevant lines of R code that you are executing. When you exit R with `q()` or control-d you will be prompted to save your R session which you can read more about [here](https://www.r-bloggers.com/using-r-dont-save-your-workspace/).
