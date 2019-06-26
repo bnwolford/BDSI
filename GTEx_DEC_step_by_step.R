@@ -26,7 +26,6 @@ dd<-"/home/bdsi2019/genomics/data/scrna/"
 #perl ~/DECComparison/utils/parse_series_matrix.pl GSE67835-GPL18573_series_matrix.txt > Ann_part2.txt
 #mv ExprMat.txt ExprMat2.txt
 
-##############
 ## STEP 4. combine the two count data togther via R script
 ### single-cell
 data1 <- read.table(paste0(dd,"ExprMat1.txt"), header=T)
