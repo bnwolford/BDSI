@@ -98,11 +98,6 @@ else {
     print OUT "#SBATCH --array=1-$num\n";
 }
 
-if ($type){
-    print OUT "#SBATCH --mail-user=$email\n";
-    print OUT "#SBATCH --mail-type=$type\n";
-}
-
 print OUT "declare -a commands\n";
 
 #print out commands from file
