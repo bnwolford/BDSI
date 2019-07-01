@@ -6,14 +6,9 @@ use Pod::Usage;
 use Getopt::Long qw(GetOptions);
 use Cwd 'abs_path';
 
-#May 12, 2016 modified from create.slurm.scripts.pl and swarm on Trek
-
-my ($h,$file, $memory, $time, $cpu, $jobID, $type, $oneliner,$maxjobs, $mempercpu);
+my ($h,$file, $memory, $time, $cpu, $jobID, $oneliner,$maxjobs, $mempercpu);
 my $inDIR=Cwd::getcwd;
 my $outDIR=Cwd::getcwd;
-my $email="bwolford\@umich.edu";
-my $partition="hunt";
-my $exclude="hunt-mc11,hunt-mc12";
 
 GetOptions( 'h' => \$h,
 	    'f=s' => \$file,
@@ -23,10 +18,6 @@ GetOptions( 'h' => \$h,
 	    'mpc:i' => \$mempercpu,
 	    't=s' => \$time,
 	    'c=i' => \$cpu,
-	    'e:s' => \$email,
-	    'y:s' => \$type,
-	    'p:s' => \$partition,
-	    'd:s' => \$exclude,
 	    'l:s' => \$oneliner,
 	    'x:i' => \$maxjobs,
 	    'j=s' => \$jobID);
@@ -42,9 +33,7 @@ USAGE: create.slurm.scripts.opts.pl
     -mpc memory per cpu (intger)
     -t time XXX:XX:XX
     -c Number of CPUs (integer)
-    -e email (string)
     -x max jobs that can run at once (integer)
-    -y email type (comma separated string) ex: BEGIN,END,FAIL
     -j jobID (string)
     -p partition (default is hunt) nomosix is other option, sun*, r01-r30 and c01-c52 are not pre-emptible
 
@@ -89,8 +78,6 @@ open (OUT,">".$out) || die "can't open the file:$out!\n";
 
 print OUT "#!/bin/bash\n";
 
-print OUT "#SBATCH --partition=$partition\n";
-print OUT "#SBATCH --exclude=$exclude\n";
 print OUT "#SBATCH --error=$outDIR/$jobID.%N_%j.%A_%a.err\n";
 print OUT "#SBATCH --output=$outDIR/$jobID.%N_%j.%A_%a.out\n";
 print OUT "#SBATCH --job-name=$jobID\n";
