@@ -37,4 +37,7 @@ gzip
 `cat file | awk '{print $3"\t"$2"\t"$1}' > newfile.txt`
 
 #nicely view a file with delimited columns 
-less -S file.txt
+`less -S file.txt`  
+
+#select certain columns from a file and write to a new file   
+`cat file | cut -f 1-12,100,150 > newfile.txt`  
