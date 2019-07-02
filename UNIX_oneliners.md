@@ -33,3 +33,5 @@ gzip
 #look at what processes you have running  
 `htop -u <uniqname>`
 
+#select certain columns from a file and write to a new file
+`cat file | awk '{print $3"\t"$2"\t"$1}' > newfile.txt
