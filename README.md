@@ -53,9 +53,11 @@ Now you find yourself in a folder that mirrors the code and files in this repo.
 
 ## Submit job array via the command line
 
-If you have a job array file with one command per line  
-`submit_jobs.sh`  
-And if you cloned this repo into your home directory you can execute a command as follows, customizing memory, time, cpu, etc.  
+Make a job array fil,  for example some `submit_jobs.sh`, with one command per line. For example:    
+```
+for f in `ls /tmp/bdsi2019/genomics/data/prs/gfg/*snps.bim`; do base=`basename $f .bim`; echo “plink --bfile /tmp/bdsi2019/genomics/data/prs/gfg/$base --score --out $base”; done > submit_score.sh
+```
+And if you cloned this repo into your home directory (see the 'Access this respository from home directory' section above) you can execute a command as follows, customizing memory, time, cpu, etc.  
 `perl ~/BDSI/create.slurm.scripts.opts.pl -f submit_jobs.sh -m 2 -t 12:00:00 -j <name> -c 1`  
 This script will tell you to run something like this  
 `sbatch /home/bdsi2019/genomics/data/prs/gfg/<name>.slurm.sh`  
