@@ -42,5 +42,5 @@ gzip
 #select certain columns from a file and write to a new file   
 `cat file | cut -f 1-12,100,150 > newfile.txt`  
 
-#print a specific line (e.g. 200) of a file
-`awk 'NR = 200 {print $0}' file`
+#print a specific line (e.g. 200) of a file  
+`awk 'NR = 200 {print $0}' file`  
