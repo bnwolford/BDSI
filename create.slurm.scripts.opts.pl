@@ -83,7 +83,7 @@ print OUT "#SBATCH --error=$outDIR/$jobID.%N_%j.%A_%a.err\n";
 print OUT "#SBATCH --output=$outDIR/$jobID.%N_%j.%A_%a.out\n";
 print OUT "#SBATCH --job-name=$jobID\n";
 print OUT "#SBATCH --time=$time\n";
-print OUT "#SBATCH --nodelist=cn048\n"; #hardcode a node for jobs
+#print OUT "#SBATCH --nodelist=cn048\n"; #hardcode a node for jobs
 
 if ($memory) {
     print OUT "#SBATCH --mem=$memory"."G\n";
