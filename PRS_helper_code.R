@@ -17,7 +17,17 @@ odds_ratio<-function(df,qtile=0.95,prev_col,grs_col){
 cutpts<-c(0.99,0.975,0.95,0.9,0.8)
 lapply(cutpts,odds_ratio,df=df,GRS_col=grs,prev_col=pheno)
 
-ggplot(df,aes(x=OR,y=as.factor(cutpt)) + geom_point() + theme_bw() +
+
+or_data <- lapply(cutpts,odds_ratio,df=hypertension1_prsice_pheno,grs_col=19,prev_col=14)
+
+or_mat=matrix(NA,nrow=5,ncol=3)
+for(i in 1:5){
+ or_mat[i,]=eval(parse(text=as.character(or_data[i])))
+}
+or_df=data.frame(OR=or_mat[,1],LB=or_mat[,2],UB=or_mat[,3])
+or_df$cutpt=cutpts
+
+ggplot(or_df,aes(x=OR,y=as.factor(cutpt)) + geom_point() + theme_bw() +
     geom_errorbarh(aes(xmin=df$LB,xmax=df$UB))
  
  ####################################  
